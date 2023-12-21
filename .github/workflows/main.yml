@@ -7,14 +7,13 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-        name: Node sample
+        name: Node ${{ matrix.node }} sample
         steps:
             - uses: actions/checkout@v3
             - name: Run linting rules and tests
-              run: |
-                npm ci
-                npm run lint
-                npm run test
-            - run: npm publish
-              env:
-                NPM_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
+              uses: actions/setup-node@v3
+              with:
+                node-version: ${{ matrix.node }}
+            - run: npm ci
+            - run: npm run lint
+            - run: npm run test
