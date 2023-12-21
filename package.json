@@ -18,8 +18,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "npm run test:ts && npm run test:jest",
     "test:jest": "jest",
     "test:ts": "tsc",
     "lint": "npm run lint:format && npm run lint:js",
