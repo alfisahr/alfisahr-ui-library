@@ -1,27 +1,5 @@
-import React from "react";
-import { Button, ButtonProps } from "./Button";
+import { Button } from "./Button";
 import type { Meta, StoryObj } from "@storybook/react";
-
-// import { Meta, Story } from "@storybook/react";
-
-// export default {
-//   title: "Components/Button",
-//   component: Button,
-// } as Meta;
-
-// const Template: Story<ButtonProps> = (args) => <Button {...args} />;
-
-// export const Primary = Template.bind({});
-// Primary.args = {
-//   text: "Primary Button",
-//   type: "primary",
-// };
-
-// export const Secondary = Template.bind({});
-// Secondary.args = {
-//   text: "Secondary Button",
-//   type: "secondary",
-// };
 
 const meta = {
   title: "Components/Button",
@@ -33,14 +11,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    text: "Primary button",
-    type: "primary",
+    children: "Primary button",
+    variant: "primary",
   },
 };
 
 export const Secondary: Story = {
   args: {
-    text: "Secondary button",
-    type: "secondary",
+    children: "Secondary button",
+    variant: "secondary",
   },
 };
