@@ -1,6 +1,6 @@
 {
   "name": "alfisahr-ui-library",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": false,
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",
