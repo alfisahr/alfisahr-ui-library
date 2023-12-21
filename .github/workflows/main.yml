@@ -17,4 +17,4 @@ jobs:
                 npm run test
             - run: npm publish
               env:
-                NPM_AUTH_TOKEN: ${{ secrets.NPMJS }}
+                NPM_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
